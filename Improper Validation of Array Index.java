@@ -1,15 +1,24 @@
-public class ArrayIndexValidationExample {
+public class DatabaseConnection {
+    // Mot de passe codé en dur, vulnérable aux attaques
+    private static final String USERNAME = "admin";
+    private static final String PASSWORD = "P@ssw0rd123";
+
     public static void main(String[] args) {
-        int[] numbers = {1, 2, 3, 4, 5};
-        
-        // Demande à l'utilisateur d'entrer un indice pour accéder au tableau
-        System.out.print("Enter an index to access: ");
-        Scanner scanner = new Scanner(System.in);
-        int index = scanner.nextInt();
-        
-        // Accès sans validation de l'indice
-        System.out.println("Value at index " + index + ": " + numbers[index]);
-        
-        scanner.close();
+        DatabaseConnection db = new DatabaseConnection();
+        db.connectToDatabase();
+    }
+
+    public void connectToDatabase() {
+        System.out.println("Connecting to the database with username: " + USERNAME);
+        // Connexion avec les identifiants codés en dur
+        try {
+            // Simuler la connexion à la base de données
+            // En vrai, vous auriez une ligne comme :
+            // Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", USERNAME, PASSWORD);
+            System.out.println("Connected to the database successfully.");
+        } catch (Exception e) {
+            System.out.println("Failed to connect to the database.");
+            e.printStackTrace();
+        }
     }
 }
