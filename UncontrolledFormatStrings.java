@@ -5,7 +5,7 @@ public class test1 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter your message:");
         String userInput = scanner.nextLine();
-        System.out.println(String.format("User message: " + userInput));
+        System.out.println("User message: " + userInput);
         scanner.close();
     }
 }
