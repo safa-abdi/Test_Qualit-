@@ -1,6 +1,6 @@
 public class DatabaseConnection {
-    private static final String USERNAME = "admin";
-    private static final String PASSWORD = "P@ssw0rd123";
+    private static final String USERNAME = System.getenv("DB_USERNAME");
+    private static final String PASSWORD = System.getenv("DB_PASSWORD");
 
     public static void main(String[] args) {
         DatabaseConnection db = new DatabaseConnection();
