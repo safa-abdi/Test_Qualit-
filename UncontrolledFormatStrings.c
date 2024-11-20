@@ -4,6 +4,6 @@ int main() {
     char userInput[256]; 
     printf("Enter your message: ");
     scanf("%s", userInput);  
-    printf("You entered: %s\n", userInput); 
+    printf(userInput); 
     return 0;
 }
