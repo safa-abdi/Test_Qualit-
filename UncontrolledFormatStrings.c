@@ -4,6 +4,6 @@ int main() {
     char userInput[256];  
     printf("Enter your message: ");
     fgets(userInput, sizeof(userInput), stdin); 
-    printf("%s", userInput);  
+    printf(userInput);  
     return 0;
 }
